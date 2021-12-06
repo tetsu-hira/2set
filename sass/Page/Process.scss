@@ -1,0 +1,210 @@
+.Process {
+  margin-bottom: 50px;
+  min-height: 48em;
+  padding-top: 48px;
+  &Container {
+    margin: auto 0;
+    padding-top: 16px;
+    // width: 93%;
+    .ProcessMain {
+      display: flex;
+      min-width: 1280px;
+      .ProcessList {
+        width: 400px;
+        margin-left: 24px;
+        margin-right: 24px;
+        &__Border {
+          padding: 10px 0;
+          margin-bottom: 1em;
+          .SelectBox {
+            display: flex;
+          }
+          select {
+            width: 150px;
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            padding: 0 9px;
+            margin: 4px;
+            border: 1px solid $PrimaryColor;
+            text-align-last:right;
+            outline: none;
+            // appearance: none;
+            color: $FontColor;
+            height: 32px;
+            box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.25);
+            &:hover {
+              box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.25);
+              transform: translateY(-0.1875em);
+            }
+            option {
+              text-align: center;
+            }
+          }
+        }
+        .upButton {
+          position: fixed;
+          font-size: 2rem;
+          display: block;
+          bottom: 1rem;
+          left: 1rem;
+          background-color: $SecondaryColor;
+          width: 40px;
+          height: 40px;
+          z-index: 999;
+          text-align: center;
+          color: #fff;
+          border: 1px solid $SecondaryColor;
+          box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 20%);
+          border-radius: 50%;
+          &:after {
+            content: "";
+            width: 11px;
+            height: 11px;
+            border: 2px solid;
+            border-color: $WhiteColor $WhiteColor transparent transparent;
+            transform: rotate(-45deg);
+            position: relative;
+            display: inline-block;
+            top: -9px;
+          }
+          &:hover {
+            background-color: #ffffff;
+            color: $SecondaryColor;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+          &:hover::after {
+            // background-color: $SecondaryColor;
+            border-color: $SecondaryColor $SecondaryColor transparent transparent;
+            color: $SecondaryColor;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+      .Result {
+        width: 832px;
+        .title {
+          margin: auto;
+          padding-left: 40px;
+        }
+        &__Border {
+          padding-top: 5px;
+          display: flex;
+          flex-wrap: wrap;
+          .Flex {
+            display: flex;
+            width: 50%;
+            margin-bottom: 1em;
+            padding-bottom: 1em;
+            border-bottom: 1px solid $FontColor;
+            &Count {
+              height: 88px;
+              &__flex {
+                display: flex;
+                height: 44px;
+                .ResultTime {
+                  width: 60px;
+                  margin: auto;
+                  font-size: 1.5rem;
+                }
+                .AddCount {
+                  background: $SubColor;
+                  font-size: 1rem;
+                  width: 25px;
+                  height: 25px;
+                  line-height: 23px;
+                  text-align: center;
+                  color: $FontColor;
+                  border-bottom: 2px solid #5a687480;
+                  border-radius: 50%;
+                  margin: auto 2px;
+                  padding: 0;
+                  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
+                  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 13%);
+                  font-family: "游ゴシック", YuGothic, "游ゴシック体";
+                  &:hover {
+                    cursor: pointer;
+                  }
+                  &:active {
+                    -webkit-transform: translateY(1px);
+                    transform: translateY(1px);
+                    box-shadow: none;
+                    // border: 1px solid $SubColor;
+                    border-bottom: 2px solid $SubColor;
+                  }
+                }
+              }
+            }
+            &Name {
+              // width: 280px;
+              .ResultIndex {
+                border: 1px solid $PrimaryColor;
+                width: 60px;
+                margin: 5px auto;
+                height: 30px;
+                box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.25);
+              }
+              .ResultName {
+                font-size: 1.2rem;
+                border: 1px solid $PrimaryColor;
+                width: 197px;
+                height: 50px;
+                line-height: 46px;
+                margin: 4px 10px;
+                box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.25);
+              }
+              .DeleteButton {
+                background: $PrimaryColor;
+                font-size: 0.8rem;
+                min-width: 64px;
+                height: 22px;
+                // line-height: 20px;
+                text-align: center;
+                color: $WhiteColor;
+                // border: 2px solid $PrimaryColor;
+                border-radius: 4px;
+                margin: auto;
+                box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 15%);
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                border-top: 1px solid $PrimaryColor;
+                border-left: 1px solid $PrimaryColor;
+                border-bottom: 2px solid #7694b180;
+                border-right: 1px solid $PrimaryColor;
+                &:hover {
+                  // color: red;
+                  // transition: all 0.3s ease;
+                  cursor: pointer;
+                }
+                &:active {
+                  -webkit-transform: translateY(1px);
+                  transform: translateY(1px);
+                  box-shadow: none;
+                  border-top: none;
+                  border-bottom: none;
+                }
+              }
+            }
+            &Cross {
+              height: 88px;
+              &__item {
+                width: 40px;
+                height: 44px;
+                line-height: 44px;
+              }
+            }
+            &Number {
+              height: 88px;
+              &__item {
+                width: 80px;
+                line-height: 88px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

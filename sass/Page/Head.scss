@@ -1,0 +1,63 @@
+.Head {
+  height: 40px;
+  margin: 4px 0;
+  border-top: none;
+  display: flex;
+  align-items: center;
+  // border: 1px solid $WhiteColor;
+  width: 100%;
+  background-color: $WhiteColor;
+  // box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  // text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
+  .name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $FontColor;
+    margin: auto;
+    margin-left: 0;
+    text-align: center;
+    height: 36px;
+    width: 118px;
+    background-color: $SubColor;
+    line-height: 36px;
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  }
+  .gross {
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 64px;
+    height: 36px;
+    background-color: $SubColor;
+    line-height: 36px;
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    text-align: center;
+  }
+  .point {
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 64px;
+    height: 36px;
+    line-height: 36px;
+    background-color: $SubColor;
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    text-align: center;
+  }
+  .score {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $FontColor;
+    width: 64px;
+    height: 36px;
+    line-height: 36px;
+    background-color: $SubColor;
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
+    
+    margin: auto;
+    text-align: center;
+  }
+  .space {
+    width: 51px;
+  }
+}
