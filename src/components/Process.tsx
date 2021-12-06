@@ -400,7 +400,9 @@ const Process: React.FC = () => {
                       </div>
                     </div>
                     <div className="FlexName">
-                      <div className="ResultName">{item.name}</div>
+                      <div className="ResultName">
+                        <p className="ResultName__text">{item.name}</p>
+                      </div>
                       <button className="DeleteButton" onClick={()=> handleRemoveTask(idx)}>取消</button>
                     </div>
                     <div className="FlexCount">
