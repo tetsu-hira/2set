@@ -17,38 +17,43 @@
         text-align: center;
         // padding-left: 12px;
         font-weight: 600;
-        width: 124px;
+        width: 160px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
         line-height: 1;
+        padding: 0px 10px;
       }
       .gross {
         font-size: 1rem;
-        width: 64px;
+        width: 48px;
         font-weight: 600;
         height: 36px;
         line-height: 2.2;
         // background: $ChangeColor;
-        margin: auto;
+        margin: 0;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
         text-align: center;
       }
       .point {
         font-size: 1rem;
-        width: 64px;
+        width: 48px;
         font-weight: 600;
         height: 36px;
         line-height: 2.2;
         // background: $ChangeColor;
-        margin: auto;
+        margin: 0;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
         text-align: center;
       }
       .score {
         font-size: 1rem;
         color: $FontColor;
-        width: 64px;
+        width: 48px;
         font-weight: 600;
         height: 36px;
         line-height: 2.2;
         // background: $ChangeColor;
-        margin: auto;
+        margin: 0;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
         text-align: center;
       }
       .AddPlan {

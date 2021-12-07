@@ -325,12 +325,13 @@ const Process: React.FC = () => {
         <div className="ProcessMain">
           <div className="ProcessList">
             <h1>【チーム一覧】</h1>
+            <p>Q：試合数　P：勝ち点　S：得失点差</p>
             <div className="ProcessList__Border">
               <div className="Head">
-                <div className="name">チーム名</div>
-                <div className="gross">試合数</div>
-                <div className="point">勝ち点</div>
-                <div className="score">得失点</div>
+                <div className="name">Team</div>
+                <div className="gross">Q</div>
+                <div className="point">P</div>
+                <div className="score">S</div>
                 <div className="space"></div>
               </div>
               <ul className="Item">

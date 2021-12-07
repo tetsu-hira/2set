@@ -1,24 +1,23 @@
 .Process {
-  margin-bottom: 50px;
   min-height: 48em;
   // padding-top: 48px;
   &Container {
     margin: auto 0;
-    padding-top: 16px;
     // width: 93%;
     .ProcessMain {
       display: flex;
       min-width: 1280px;
       height: 100vh;
       .ProcessList {
-        width: 400px;
-        padding-left: 24px;
-        padding-right: 24px;
+        max-width: 400px;
+        padding: 16px 24px 0px 24px;
         max-height: 100vh;
         overflow: auto;
         flex: 1;
+        p {
+          font-size: 0.8rem;
+        }
         &__Border {
-          padding: 10px 0;
           margin-bottom: 1em;
           .SelectBox {
             display: flex;
@@ -92,6 +91,8 @@
         max-height: 100vh;
         overflow: auto;
         flex: 2;
+        margin-left: 24px;
+        padding-top: 16px;
         .title {
           margin: 0;
           padding-left: 40px;
@@ -148,6 +149,7 @@
             }
             &Name {
               // width: 280px;
+              color: $FontColor;
               .ResultIndex {
                 border: 1px solid $PrimaryColor;
                 width: 60px;
