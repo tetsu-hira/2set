@@ -382,7 +382,7 @@ const Process: React.FC = () => {
                 { plan.map((item, idx: number) => (
                   <div className="Flex" key={idx}>
                     <div className="FlexNumber">
-                      { idx % 2 === 0 && <div className="FlexNumber__item">第{idx/2+1}試合</div> }
+                      { idx % 2 === 0 && <div className="FlexNumber__item">{idx/2+1}</div> }
                     </div>
                     <div className="FlexCross">
                       { idx % 2 !== 0 && <div className="FlexCross__item">✖</div> }

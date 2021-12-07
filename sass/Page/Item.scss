@@ -21,6 +21,9 @@
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
         line-height: 1;
         padding: 0px 10px;
+        @include mq() {
+          font-size: 0.8em;
+        }
       }
       .gross {
         font-size: 1rem;
@@ -32,6 +35,10 @@
         margin: 0;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
         text-align: center;
+        @include mq() {
+          font-size: 0.8em;
+          line-height: 2.8em;
+        }
       }
       .point {
         font-size: 1rem;
@@ -43,6 +50,10 @@
         margin: 0;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
         text-align: center;
+        @include mq() {
+          font-size: 0.8em;
+          line-height: 2.8em;
+        }
       }
       .score {
         font-size: 1rem;
@@ -55,6 +66,10 @@
         margin: 0;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
         text-align: center;
+        @include mq() {
+          font-size: 0.8em;
+          line-height: 2.8em;
+        }
       }
       .AddPlan {
         background: $PrimaryColor;
