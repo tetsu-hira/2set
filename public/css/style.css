@@ -399,6 +399,7 @@ button {
   .ProcessContainer .ProcessMain {
     display: block;
     min-width: 320px;
+    height: auto;
   }
 }
 .ProcessContainer .ProcessMain .ProcessList {
@@ -455,7 +456,7 @@ button {
   position: fixed;
   font-size: 2rem;
   display: block;
-  bottom: 1rem;
+  bottom: 4rem;
   left: 1rem;
   background-color: #dcc9b7;
   width: 40px;
@@ -489,6 +490,44 @@ button {
   color: #dcc9b7;
   transition: all 0.3s ease;
 }
+.ProcessContainer .ProcessMain .ProcessList .downButton {
+  position: fixed;
+  font-size: 2rem;
+  display: block;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: #dcc9b7;
+  width: 40px;
+  height: 40px;
+  z-index: 999;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #dcc9b7;
+  box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+.ProcessContainer .ProcessMain .ProcessList .downButton:after {
+  content: "";
+  width: 11px;
+  height: 11px;
+  border: 2px solid;
+  border-color: #fff #fff transparent transparent;
+  transform: rotate(135deg);
+  position: relative;
+  display: inline-block;
+  top: -16px;
+}
+.ProcessContainer .ProcessMain .ProcessList .downButton:hover {
+  background-color: #ffffff;
+  color: #dcc9b7;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.ProcessContainer .ProcessMain .ProcessList .downButton:hover::after {
+  border-color: #dcc9b7 #dcc9b7 transparent transparent;
+  color: #dcc9b7;
+  transition: all 0.3s ease;
+}
 .ProcessContainer .ProcessMain .Result {
   min-width: 836px;
   max-height: 100vh;
@@ -504,6 +543,7 @@ button {
     min-width: 320px;
     margin-left: 0;
     overflow: unset;
+    padding-bottom: 3em;
   }
 }
 .ProcessContainer .ProcessMain .Result .title {

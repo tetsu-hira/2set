@@ -375,6 +375,7 @@ const Process: React.FC = () => {
               </div>
             </div>
             <div className="upButton"  onClick={returnTop}></div>
+            <div className="downButton"  onClick={returnTop}></div>
           </div>
           <div className="Result">
             <h1 className="title">【試合内容】</h1>
