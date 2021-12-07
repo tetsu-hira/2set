@@ -1,6 +1,9 @@
 .Process {
   min-height: 48em;
   // padding-top: 48px;
+  @include mq() {
+    min-height: auto;
+  }
   &Container {
     margin: auto 0;
     // width: 93%;
@@ -8,14 +11,27 @@
       display: flex;
       min-width: 1280px;
       height: 100vh;
+      @include mq() {
+        display: block;
+        min-width: 320px;
+      }
       .ProcessList {
         max-width: 400px;
         padding: 16px 24px 0px 24px;
         max-height: 100vh;
         overflow: auto;
         flex: 1;
+        @include mq() {
+          max-width: 600px;
+          width: 100%;
+        }
         p {
           font-size: 0.8rem;
+        }
+        h1 {
+          @include mq() {
+            font-size: 1.2em;
+          }
         }
         &__Border {
           margin-bottom: 1em;
