@@ -173,7 +173,7 @@ button {
     position: relative;
   }
 }
-.Cross__item__text {
+.Cross__item .Cross__text {
   position: absolute;
   top: 51%;
   left: 50%;
