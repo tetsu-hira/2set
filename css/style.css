@@ -69,6 +69,11 @@ button {
   line-height: 3.8;
   font-size: 0.8rem;
 }
+@media screen and (max-width: 600px) {
+  .Footer {
+    display: none;
+  }
+}
 
 .Header {
   height: 48px;
@@ -108,8 +113,8 @@ button {
     margin: auto;
     font-size: 0.8em;
     text-align: center;
-    height: 32px;
-    line-height: 32px;
+    height: 40px;
+    line-height: 40px;
   }
 }
 .Header .Jump {
@@ -140,6 +145,41 @@ button {
 .Header .JumpList__item:hover {
   opacity: 0.6;
   transition: 0.1s;
+}
+
+.Cross {
+  height: 88px;
+  width: 2%;
+  border-bottom: 1px solid #6c7686;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .Cross {
+    display: block;
+    width: 4%;
+    border-bottom: 1px solid #6c7686;
+    height: 105px;
+  }
+}
+.Cross__item {
+  width: auto;
+  height: 44px;
+  line-height: 44px;
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  .Cross__item {
+    width: auto;
+    position: relative;
+  }
+}
+.Cross__item__text {
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.7em;
 }
 
 .Form {
@@ -399,7 +439,6 @@ button {
   .ProcessContainer .ProcessMain {
     display: block;
     min-width: 320px;
-    height: auto;
   }
 }
 .ProcessContainer .ProcessMain .ProcessList {
@@ -455,8 +494,8 @@ button {
 .ProcessContainer .ProcessMain .ProcessList .upButton {
   position: fixed;
   font-size: 2rem;
-  display: block;
-  bottom: 4rem;
+  display: none;
+  top: 1.5em;
   left: 1rem;
   background-color: #dcc9b7;
   width: 40px;
@@ -467,6 +506,11 @@ button {
   border: 1px solid #dcc9b7;
   box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 0.2);
   border-radius: 50%;
+}
+@media screen and (max-width: 600px) {
+  .ProcessContainer .ProcessMain .ProcessList .upButton {
+    display: block;
+  }
 }
 .ProcessContainer .ProcessMain .ProcessList .upButton:after {
   content: "";
@@ -493,8 +537,8 @@ button {
 .ProcessContainer .ProcessMain .ProcessList .downButton {
   position: fixed;
   font-size: 2rem;
-  display: block;
-  bottom: 1rem;
+  display: none;
+  top: 3em;
   left: 1rem;
   background-color: #dcc9b7;
   width: 40px;
@@ -505,6 +549,11 @@ button {
   border: 1px solid #dcc9b7;
   box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 0.2);
   border-radius: 50%;
+}
+@media screen and (max-width: 600px) {
+  .ProcessContainer .ProcessMain .ProcessList .downButton {
+    display: block;
+  }
 }
 .ProcessContainer .ProcessMain .ProcessList .downButton:after {
   content: "";
@@ -548,14 +597,14 @@ button {
 }
 .ProcessContainer .ProcessMain .Result .title {
   margin: 0;
-  padding-left: 40px;
+  padding-left: 80px;
   width: 836px;
 }
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result .title {
     font-size: 1.2em;
     width: auto;
-    padding-left: 25px;
+    padding-left: 0;
   }
 }
 .ProcessContainer .ProcessMain .Result__Border {
@@ -567,6 +616,7 @@ button {
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border {
     width: 100%;
+    justify-content: space-around;
   }
 }
 .ProcessContainer .ProcessMain .Result__Border .Flex {
@@ -576,12 +626,26 @@ button {
   padding-bottom: 1em;
   border-bottom: 1px solid #6c7686;
 }
+@media screen and (max-width: 600px) {
+  .ProcessContainer .ProcessMain .Result__Border .Flex {
+    justify-content: space-around;
+    width: 48%;
+  }
+}
 .ProcessContainer .ProcessMain .Result__Border .FlexCount {
   height: 88px;
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexCount__flex {
   display: flex;
   height: 44px;
+  width: auto;
+}
+@media screen and (max-width: 600px) {
+  .ProcessContainer .ProcessMain .Result__Border .FlexCount__flex {
+    display: block;
+    width: 48px;
+    position: relative;
+  }
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexCount__flex .ResultTime {
   width: 60px;
@@ -592,7 +656,51 @@ button {
   .ProcessContainer .ProcessMain .Result__Border .FlexCount__flex .ResultTime {
     width: 30px;
     font-size: 1.2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
   }
+}
+.ProcessContainer .ProcessMain .Result__Border .FlexCount__flex .SubCount {
+  background: #e2f1f1;
+  font-size: 1rem;
+  width: 32px;
+  height: 32px;
+  line-height: 16px;
+  text-align: center;
+  color: #6c7686;
+  border-bottom: 2px solid #5a687480;
+  border-radius: 50%;
+  margin: auto 6px;
+  padding: 0;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
+  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.13);
+  font-family: "游ゴシック", YuGothic, "游ゴシック体";
+}
+@media screen and (max-width: 600px) {
+  .ProcessContainer .ProcessMain .Result__Border .FlexCount__flex .SubCount {
+    display: inline-block;
+    width: 32px;
+    height: 16px;
+    border-radius: 50%/0 0 100% 100%;
+    margin: auto 3px;
+    position: absolute;
+    left: 5px;
+    top: 20px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    line-height: 8px;
+  }
+}
+.ProcessContainer .ProcessMain .Result__Border .FlexCount__flex .SubCount:hover {
+  cursor: pointer;
+}
+.ProcessContainer .ProcessMain .Result__Border .FlexCount__flex .SubCount:active {
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px);
+  box-shadow: none;
+  border-bottom: 2px solid #e2f1f1;
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexCount__flex .AddCount {
   background: #e2f1f1;
@@ -612,9 +720,15 @@ button {
 }
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border .FlexCount__flex .AddCount {
-    width: 24px;
-    height: 24px;
+    display: inline-block;
+    width: 32px;
+    height: 16px;
+    border-radius: 50%/100% 100% 0 0;
     margin: auto 3px;
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
   }
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexCount__flex .AddCount:hover {
@@ -631,7 +745,7 @@ button {
 }
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border .FlexName {
-    width: 100%;
+    width: 96px;
   }
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexName .ResultIndex {
@@ -698,18 +812,42 @@ button {
 .ProcessContainer .ProcessMain .Result__Border .FlexCross {
   height: 88px;
 }
+@media screen and (max-width: 600px) {
+  .ProcessContainer .ProcessMain .Result__Border .FlexCross {
+    display: none;
+    width: 2%;
+    border-bottom: 1px solid #6c7686;
+    height: 105px;
+  }
+}
 .ProcessContainer .ProcessMain .Result__Border .FlexCross__item {
-  width: 40px;
+  width: 80px;
   height: 44px;
   line-height: 44px;
+  position: relative;
 }
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border .FlexCross__item {
-    width: 20px;
+    width: auto;
+    position: relative;
   }
+}
+.ProcessContainer .ProcessMain .Result__Border .FlexCross__item .CrossText {
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8em;
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexNumber {
   height: 88px;
+}
+@media screen and (max-width: 600px) {
+  .ProcessContainer .ProcessMain .Result__Border .FlexNumber {
+    margin: auto 2px auto 6px;
+    display: none;
+  }
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexNumber__item {
   width: 80px;
@@ -718,5 +856,7 @@ button {
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border .FlexNumber__item {
     width: 20px;
+    line-height: 1.2;
+    font-size: 0.8em;
   }
 }
