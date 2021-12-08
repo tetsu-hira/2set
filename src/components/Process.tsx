@@ -308,12 +308,25 @@ const Process: React.FC = () => {
   //   setPlan(items);
   // }
 
+  // 上にスクロール
   const returnTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
+  // 下にスクロール
+  const goBottom = () => {
+    var elm = document.documentElement;
+    //scrollHeight ページの高さ clientHeight ブラウザの高さ
+    var bottom = elm.scrollHeight - elm.clientHeight;
+    //垂直方向へ移動
+    window.scrollTo({
+      behavior: "smooth" ,	// スムーズスクロールにする
+      left: 0 ,	// 左から離れた位置
+      top: bottom ,	// 上から離れた位置
+    });
+  }
 
   // 確認のため設置
   console.log(list);
@@ -375,15 +388,16 @@ const Process: React.FC = () => {
               </div>
             </div>
             <div className="upButton"  onClick={returnTop}></div>
-            <div className="downButton"  onClick={returnTop}></div>
+            <div className="downButton"  onClick={goBottom}></div>
           </div>
           <div className="Result">
             <h1 className="title">【試合内容】</h1>
               <div className="Result__Border">
                 { plan.map((item, idx: number) => (
+                  <>
                   <div className="Flex" key={idx}>
                     <div className="FlexNumber">
-                      { idx % 2 === 0 && <div className="FlexNumber__item">{idx/2+1}</div> }
+                      { idx % 2 === 0 && <div className="FlexNumber__item">第{idx/2+1}試合</div> }
                     </div>
                     <div className="FlexCross">
                       { idx % 2 !== 0 && <div className="FlexCross__item">✖</div> }
@@ -391,12 +405,12 @@ const Process: React.FC = () => {
                     </div>
                     <div className="FlexCount">
                       <div className="FlexCount__flex">
-                        { idx % 2 === 0 && <button className="AddCount" onClick={()=> addTime1(idx, -1)}>-</button> }
+                        { idx % 2 === 0 && <button className="SubCount" onClick={()=> addTime1(idx, -1)}>-</button> }
                         { idx % 2 === 0 && <button className="AddCount" onClick={()=> addTime1(idx, 5)}>+</button> }
                         { idx % 2 !== 0 && <div className="ResultTime">{item.time1}</div> }
                       </div>
                       <div className="FlexCount__flex">
-                        { idx % 2 === 0 && <button className="AddCount" onClick={()=> addTime2(idx, -1)}>-</button> }
+                        { idx % 2 === 0 && <button className="SubCount" onClick={()=> addTime2(idx, -1)}>-</button> }
                         { idx % 2 === 0 && <button className="AddCount" onClick={()=> addTime2(idx, 5)}>+</button> }
                         { idx % 2 !== 0 && <div className="ResultTime">{item.time2}</div> }
                       </div>
@@ -409,17 +423,26 @@ const Process: React.FC = () => {
                     </div>
                     <div className="FlexCount">
                       <div className="FlexCount__flex">
-                        { idx % 2 !== 0 && <button className="AddCount" onClick={()=> addTime1(idx, -1)}>-</button> }
+                        { idx % 2 !== 0 && <button className="SubCount" onClick={()=> addTime1(idx, -1)}>-</button> }
                         { idx % 2 !== 0 && <button className="AddCount" onClick={()=> addTime1(idx, 5)}>+</button> }
                         { idx % 2 === 0 && <div className="ResultTime">{item.time1}</div> }
                       </div>
                       <div className="FlexCount__flex">
-                        { idx % 2 !== 0 && <button className="AddCount" onClick={()=> addTime2(idx, -1)}>-</button> }
+                        { idx % 2 !== 0 && <button className="SubCount" onClick={()=> addTime2(idx, -1)}>-</button> }
                         { idx % 2 !== 0 && <button className="AddCount" onClick={()=> addTime2(idx, 5)}>+</button> }
                         { idx % 2 === 0 && <div className="ResultTime">{item.time2}</div> }
                       </div>
                     </div>
                   </div>
+                  { idx % 2 === 0 && <div className="Cross">
+                    <div className="Cross__item">
+                      <div className="Cross__text">✖</div>
+                    </div>
+                    <div className="Cross__item">
+                      <div className="Cross__text">✖</div>
+                    </div>
+                  </div> }
+                  </>
                 )) }
               </div>
             <div>

@@ -14,7 +14,6 @@
       @include mq() {
         display: block;
         min-width: 320px;
-        height: auto;
       }
       .ProcessList {
         max-width: 400px;
@@ -67,8 +66,8 @@
         .upButton {
           position: fixed;
           font-size: 2rem;
-          display: block;
-          bottom: 4rem;
+          display: none;
+          top: 1.5em;
           left: 1rem;
           background-color: $SecondaryColor;
           width: 40px;
@@ -79,6 +78,9 @@
           border: 1px solid $SecondaryColor;
           box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 20%);
           border-radius: 50%;
+          @include mq() {
+            display: block;
+          }
           &:after {
             content: "";
             width: 11px;
@@ -106,8 +108,8 @@
         .downButton {
           position: fixed;
           font-size: 2rem;
-          display: block;
-          bottom: 1rem;
+          display: none;
+          top: 3em;
           left: 1rem;
           background-color: $SecondaryColor;
           width: 40px;
@@ -118,6 +120,9 @@
           border: 1px solid $SecondaryColor;
           box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 20%);
           border-radius: 50%;
+          @include mq() {
+            display: block;
+          }
           &:after {
             content: "";
             width: 11px;
@@ -160,12 +165,12 @@
         }
         .title {
           margin: 0;
-          padding-left: 40px;
+          padding-left: 80px;
           width: 836px;
           @include mq() {
             font-size: 1.2em;
             width: auto;
-            padding-left: 25px;
+            padding-left: 0;
           }
         }
         &__Border {
@@ -175,6 +180,7 @@
           width: 836px;
           @include mq() {
             width: 100%;
+            justify-content: space-around;
           }
           .Flex {
             display: flex;
@@ -182,11 +188,21 @@
             margin-bottom: 1em;
             padding-bottom: 1em;
             border-bottom: 1px solid $FontColor;
+            @include mq() {
+              justify-content: space-around;
+              width: 48%;
+            }
             &Count {
               height: 88px;
               &__flex {
                 display: flex;
                 height: 44px;
+                width: auto;
+                @include mq() {
+                  display: block;
+                  width: 48px;
+                  position: relative;
+                }
                 .ResultTime {
                   width: 60px;
                   margin: auto;
@@ -194,6 +210,49 @@
                   @include mq() {
                     width: 30px;
                     font-size: 1.2em;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-right: -50%;
+                    transform: translate(-50%, -50%);
+                  }
+                }
+                .SubCount {
+                  background: $SubColor;
+                  font-size: 1rem;
+                  width: 32px;
+                  height: 32px;
+                  line-height: 16px;
+                  text-align: center;
+                  color: $FontColor;
+                  border-bottom: 2px solid #5a687480;
+                  border-radius: 50%;
+                  margin: auto 6px;
+                  padding: 0;
+                  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
+                  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 13%);
+                  font-family: "游ゴシック", YuGothic, "游ゴシック体";
+                  @include mq() {
+                    display: inline-block;
+                    width: 32px;
+                    height: 16px;
+                    border-radius: 50% / 0 0 100% 100%;
+                    margin: auto 3px;
+                    position: absolute;
+                    left: 5px;
+                    top: 20px;
+                    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 10%);
+                    line-height: 8px;
+                  }
+                  &:hover {
+                    cursor: pointer;
+                  }
+                  &:active {
+                    -webkit-transform: translateY(1px);
+                    transform: translateY(1px);
+                    box-shadow: none;
+                    // border: 1px solid $SubColor;
+                    border-bottom: 2px solid $SubColor;
                   }
                 }
                 .AddCount {
@@ -212,9 +271,15 @@
                   box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 13%);
                   font-family: "游ゴシック", YuGothic, "游ゴシック体";
                   @include mq() {
-                    width: 24px;
-                    height: 24px;
+                    display: inline-block;
+                    width: 32px;
+                    height: 16px;
+                    border-radius: 50% / 100% 100% 0 0;
                     margin: auto 3px;
+                    position: absolute;
+                    left: 5px;
+                    top: 2px;
+                    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 10%);
                   }
                   &:hover {
                     cursor: pointer;
@@ -232,7 +297,7 @@
             &Name {
               color: $FontColor;
               @include mq() {
-                width: 100%;
+                width: 96px;
               }
               .ResultIndex {
                 border: 1px solid $PrimaryColor;
@@ -300,22 +365,44 @@
             }
             &Cross {
               height: 88px;
+              @include mq() {
+                display: none;
+                width: 2%;
+                border-bottom: 1px solid $FontColor;
+                height: 105px;
+              }
               &__item {
-                width: 40px;
+                width: 80px;
                 height: 44px;
                 line-height: 44px;
+                position: relative;
                 @include mq() {
-                  width: 20px;
+                  width: auto;
+                  position: relative;
+                }
+                .CrossText {
+                  position: absolute;
+                  top: 51%;
+                  left: 50%;
+                  margin-right: -50%;
+                  transform: translate(-50%, -50%);
+                  font-size: 0.8em;
                 }
               }
             }
             &Number {
               height: 88px;
+              @include mq() {
+                margin: auto 2px auto 6px;
+                display: none;
+              }
               &__item {
                 width: 80px;
                 line-height: 88px;
                 @include mq() {
                   width: 20px;
+                  line-height: 1.2;
+                  font-size: 0.8em;
                 }
               }
             }

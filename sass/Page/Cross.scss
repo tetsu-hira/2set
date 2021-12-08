@@ -1,0 +1,30 @@
+.Cross {
+  height: 88px;
+  width: 2%;
+  border-bottom: 1px solid $FontColor;
+  display: none;
+  @include mq() {
+    display: block;
+    width: 4%;
+    border-bottom: 1px solid $FontColor;
+    height: 105px;
+  }
+  &__item {
+    width: auto;
+    height: 44px;
+    line-height: 44px;
+    position: relative;
+    @include mq() {
+      width: auto;
+      position: relative;
+    }
+  &__text {
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.7em;
+  }
+  }
+}
