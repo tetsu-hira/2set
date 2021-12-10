@@ -39,11 +39,11 @@
   }
   .WebTitle {
     color: $WhiteColor;
-    font-size: 2.5em;
-    font-family: "Nico Moji";
+    font-size: 2em;
+    font-family: 'Yomogi', cursive;
     position: absolute;
     text-shadow: 1px 1px 0px rgba(86, 89, 108, 0.94);
-    top: -7px;
+    top: -5px;
     left: 25em;
     @include mq() {
       display: none;
