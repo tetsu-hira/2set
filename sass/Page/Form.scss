@@ -13,6 +13,9 @@
       width: 200px;
       box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.3);
       color: $FontColor;
+      @include mq() {
+        width: 160px;
+      }
     }
     &__button {
       background: $SecondaryColor;
@@ -26,6 +29,9 @@
       border: 1px solid $SecondaryColor;
       margin: 8px 0;
       box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 20%);
+      @include mq() {
+        width: 80px;
+      }
       &:hover {
         background-color: #ffffff;
         color: $SecondaryColor;

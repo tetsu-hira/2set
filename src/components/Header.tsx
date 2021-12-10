@@ -28,6 +28,7 @@ const [ title, setTitle ] = useState<string>("＜ここをクリックして大�
   return (
     <div className="Header">
         <input className="HeaderTitle" type="text" onChange={changeTitle} onClick={titleClear} onBlur={returnTitle} value={title} />
+        <div className="WebTitle">「にせっとまっち」</div>
     </div>
   )
 }
