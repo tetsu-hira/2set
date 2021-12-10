@@ -395,53 +395,77 @@ const Process: React.FC = () => {
               <div className="Result__Border">
                 { plan.map((item, idx: number) => (
                   <>
-                  <div className="Flex" key={idx}>
-                    <div className="FlexNumber">
-                      { idx % 2 === 0 && <div className="FlexNumber__item">第{idx/2+1}試合</div> }
-                    </div>
-                    <div className="FlexCross">
-                      { idx % 2 !== 0 && <div className="FlexCross__item">✖</div> }
-                      { idx % 2 !== 0 && <div className="FlexCross__item">✖</div> }
-                    </div>
-                    <div className="FlexCount">
-                      <div className="FlexCount__flex">
-                        { idx % 2 === 0 && <button className="SubCount" onClick={()=> addTime1(idx, -1)}>-</button> }
-                        { idx % 2 === 0 && <button className="AddCount" onClick={()=> addTime1(idx, 5)}>+</button> }
-                        { idx % 2 !== 0 && <div className="ResultTime">{item.time1}</div> }
+                    <div className="Flex" key={idx}>
+                      <div className="FlexNumber">
+                        { idx % 2 === 0 && <div className="FlexNumber__item">第{idx/2+1}試合</div> }
                       </div>
-                      <div className="FlexCount__flex">
-                        { idx % 2 === 0 && <button className="SubCount" onClick={()=> addTime2(idx, -1)}>-</button> }
-                        { idx % 2 === 0 && <button className="AddCount" onClick={()=> addTime2(idx, 5)}>+</button> }
-                        { idx % 2 !== 0 && <div className="ResultTime">{item.time2}</div> }
+                      <div className="FlexCross">
+                        { idx % 2 !== 0 && <div className="FlexCross__item">✖</div> }
+                        { idx % 2 !== 0 && <div className="FlexCross__item">✖</div> }
+                      </div>
+                      <div className="FlexCount">
+                        { idx % 2 === 0 &&
+                          <div className="FlexCount__Button">
+                            <button className="SubCount" onClick={()=> addTime1(idx, -1)}>-</button>
+                            <button className="AddCount" onClick={()=> addTime1(idx, 5)}>+</button>
+                          </div>
+                        }
+                        { idx % 2 !== 0 &&
+                          <div className="FlexCount__Point">
+                            <div className="ResultTime">{item.time1}</div>
+                          </div>
+                        }
+                        { idx % 2 === 0 &&
+                          <div className="FlexCount__Button">
+                            <button className="SubCount" onClick={()=> addTime2(idx, -1)}>-</button>
+                            <button className="AddCount" onClick={()=> addTime2(idx, 5)}>+</button>
+                          </div>
+                        }
+                        { idx % 2 !== 0 &&
+                          <div className="FlexCount__Point">
+                            <div className="ResultTime">{item.time2}</div>
+                          </div>
+                        }
+                      </div>
+                      <div className="FlexName">
+                        <div className="ResultName">
+                          <p className="ResultName__text">{item.name}</p>
+                        </div>
+                        <button className="DeleteButton" onClick={()=> handleRemoveTask(idx)}>取消</button>
+                      </div>
+                      <div className="FlexCount">
+                      { idx % 2 !== 0 &&
+                        <div className="FlexCount__Button">
+                          <button className="SubCount" onClick={()=> addTime1(idx, -1)}>-</button>
+                          <button className="AddCount" onClick={()=> addTime1(idx, 5)}>+</button>
+                        </div>
+                      }
+                      { idx % 2 === 0 &&
+                        <div className="FlexCount__Point">
+                          <div className="ResultTime">{item.time1}</div>
+                        </div>
+                      }
+                      { idx % 2 !== 0 &&
+                        <div className="FlexCount__Button">
+                          <button className="SubCount" onClick={()=> addTime2(idx, -1)}>-</button>
+                          <button className="AddCount" onClick={()=> addTime2(idx, 5)}>+</button>
+                        </div>
+                      }
+                      { idx % 2 === 0 &&
+                        <div className="FlexCount__Point">
+                          <div className="ResultTime">{item.time2}</div>
+                        </div>
+                      }
                       </div>
                     </div>
-                    <div className="FlexName">
-                      <div className="ResultName">
-                        <p className="ResultName__text">{item.name}</p>
+                    { idx % 2 === 0 && <div className="Cross">
+                      <div className="Cross__item">
+                        <div className="Cross__text">✖</div>
                       </div>
-                      <button className="DeleteButton" onClick={()=> handleRemoveTask(idx)}>取消</button>
-                    </div>
-                    <div className="FlexCount">
-                      <div className="FlexCount__flex">
-                        { idx % 2 !== 0 && <button className="SubCount" onClick={()=> addTime1(idx, -1)}>-</button> }
-                        { idx % 2 !== 0 && <button className="AddCount" onClick={()=> addTime1(idx, 5)}>+</button> }
-                        { idx % 2 === 0 && <div className="ResultTime">{item.time1}</div> }
+                      <div className="Cross__item">
+                        <div className="Cross__text">✖</div>
                       </div>
-                      <div className="FlexCount__flex">
-                        { idx % 2 !== 0 && <button className="SubCount" onClick={()=> addTime2(idx, -1)}>-</button> }
-                        { idx % 2 !== 0 && <button className="AddCount" onClick={()=> addTime2(idx, 5)}>+</button> }
-                        { idx % 2 === 0 && <div className="ResultTime">{item.time2}</div> }
-                      </div>
-                    </div>
-                  </div>
-                  { idx % 2 === 0 && <div className="Cross">
-                    <div className="Cross__item">
-                      <div className="Cross__text">✖</div>
-                    </div>
-                    <div className="Cross__item">
-                      <div className="Cross__text">✖</div>
-                    </div>
-                  </div> }
+                    </div> }
                   </>
                 )) }
               </div>

@@ -149,7 +149,7 @@
         }
       }
       .Result {
-        min-width: 836px;
+        width: 800px;
         max-height: 100vh;
         overflow: auto;
         flex: 2;
@@ -165,8 +165,8 @@
         }
         .title {
           margin: 0;
-          padding-left: 80px;
-          width: 836px;
+          padding-left: 60px;
+          width: 800px;
           @include mq() {
             font-size: 1.2em;
             width: auto;
@@ -177,7 +177,7 @@
           padding-top: 5px;
           display: flex;
           flex-wrap: wrap;
-          width: 836px;
+          width: 800px;
           @include mq() {
             width: 100%;
             justify-content: space-around;
@@ -194,28 +194,15 @@
             }
             &Count {
               height: 88px;
-              &__flex {
+              width: auto;
+              &__Button {
                 display: flex;
                 height: 44px;
-                width: auto;
+                width: 80px;
                 @include mq() {
                   display: block;
                   width: 48px;
                   position: relative;
-                }
-                .ResultTime {
-                  width: 60px;
-                  margin: auto;
-                  font-size: 1.5rem;
-                  @include mq() {
-                    width: 30px;
-                    font-size: 1.2em;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    margin-right: -50%;
-                    transform: translate(-50%, -50%);
-                  }
                 }
                 .SubCount {
                   background: $SubColor;
@@ -227,7 +214,7 @@
                   color: $FontColor;
                   border-bottom: 2px solid #5a687480;
                   border-radius: 50%;
-                  margin: auto 6px;
+                  margin: auto;
                   padding: 0;
                   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
                   box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 13%);
@@ -265,7 +252,7 @@
                   color: $FontColor;
                   border-bottom: 2px solid #5a687480;
                   border-radius: 50%;
-                  margin: auto 6px;
+                  margin: auto;
                   padding: 0;
                   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
                   box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 13%);
@@ -293,9 +280,34 @@
                   }
                 }
               }
+              &__Point {
+                display: flex;
+                height: 44px;
+                width: 60px;
+                @include mq() {
+                  display: block;
+                  width: 48px;
+                  position: relative;
+                }
+                .ResultTime {
+                  width: 60px;
+                  margin: auto;
+                  font-size: 1.5rem;
+                  @include mq() {
+                    width: 30px;
+                    font-size: 1.2em;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-right: -50%;
+                    transform: translate(-50%, -50%);
+                  }
+                }
+              }
             }
             &Name {
               color: $FontColor;
+              width: 200px;
               @include mq() {
                 width: 96px;
               }
@@ -309,7 +321,7 @@
               .ResultName {
                 font-size: 1rem;
                 border: 1px solid $PrimaryColor;
-                width: 168px;
+                width: 178px;
                 height: 50px;
                 line-height: 1;
                 margin: 4px 10px;
@@ -372,7 +384,7 @@
                 height: 105px;
               }
               &__item {
-                width: 80px;
+                width: 60px;
                 height: 44px;
                 line-height: 44px;
                 position: relative;
@@ -397,8 +409,9 @@
                 display: none;
               }
               &__item {
-                width: 80px;
+                width: 60px;
                 line-height: 88px;
+                font-size: 0.8em;
                 @include mq() {
                   width: 20px;
                   line-height: 1.2;
