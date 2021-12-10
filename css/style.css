@@ -83,7 +83,8 @@ button {
   justify-content: space-between;
   box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 0px 1px 3px rgba(0, 0, 0, 0.2);
   z-index: 100;
-  min-width: 960px;
+  min-width: 1200px;
+  position: relative;
 }
 @media screen and (max-width: 600px) {
   .Header {
@@ -117,34 +118,19 @@ button {
     line-height: 40px;
   }
 }
-.Header .Jump {
-  display: flex;
-  line-height: 2;
+.Header .WebTitle {
+  color: #fff;
+  font-size: 2.5em;
+  font-family: "Nico Moji";
+  position: absolute;
+  text-shadow: 1px 1px 0px rgba(86, 89, 108, 0.94);
+  top: -7px;
+  left: 25em;
 }
-.Header .JumpList {
-  height: 100%;
-  width: 96px;
-  display: inline-block;
-  padding: 0;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
-}
-.Header .JumpList button {
-  text-decoration: none;
-}
-.Header .JumpList__item {
-  margin: auto;
-  text-align: center;
-  display: block;
-  width: 100%;
-  height: 100%;
-  color: #6c7686;
-  font-weight: 600;
-  line-height: 3.4;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
-}
-.Header .JumpList__item:hover {
-  opacity: 0.6;
-  transition: 0.1s;
+@media screen and (max-width: 600px) {
+  .Header .WebTitle {
+    display: none;
+  }
 }
 
 .Cross {
@@ -199,6 +185,11 @@ button {
   box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.3);
   color: #6c7686;
 }
+@media screen and (max-width: 600px) {
+  .FormContent__name {
+    width: 160px;
+  }
+}
 .FormContent__button {
   background: #dcc9b7;
   font-size: 12px;
@@ -210,6 +201,11 @@ button {
   border: 1px solid #dcc9b7;
   margin: 8px 0;
   box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 600px) {
+  .FormContent__button {
+    width: 80px;
+  }
 }
 .FormContent__button:hover {
   background-color: #ffffff;
