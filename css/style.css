@@ -94,28 +94,33 @@ button {
   }
 }
 .HeaderTitle {
-  width: 39rem;
+  width: 21em;
   cursor: pointer;
-  color: #6c7686;
   border: none;
   background-color: #b7cadc;
-  margin-left: 48px;
-  line-height: 24px;
+  top: -2px;
+  left: 16.2em;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   outline: none;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
+  color: #fff;
+  font-size: 2em;
+  font-family: "Yomogi", cursive;
+  text-align: center;
+  position: absolute;
+  text-shadow: 1px 1px 0px rgba(86, 89, 108, 0.94);
 }
 @media screen and (max-width: 600px) {
   .HeaderTitle {
     margin: auto;
-    font-size: 0.8em;
+    font-size: 1em;
     text-align: center;
     height: 40px;
     line-height: 40px;
+    left: 0;
+    width: 100%;
+    position: initial;
   }
 }
 .Header .WebTitle {
@@ -125,7 +130,7 @@ button {
   position: absolute;
   text-shadow: 1px 1px 0px rgba(86, 89, 108, 0.94);
   top: -5px;
-  left: 25em;
+  left: 1.6em;
 }
 @media screen and (max-width: 600px) {
   .Header .WebTitle {
