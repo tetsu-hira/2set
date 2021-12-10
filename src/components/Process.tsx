@@ -380,11 +380,11 @@ const Process: React.FC = () => {
                 <input className="InsertContent__entry" type="number" id="draw_lose" onChange={changeDrawLose}></input>
               </div>
             </div>
-            <h1>【チームを追加】</h1>
+            <h1>【チームを登録】</h1>
             <div className="Form">
               <div className="FormContent">
                 <input className="FormContent__name" type="text" id="name" value={data} onChange={changeData}></input>
-                <button className="FormContent__button" type="submit" onClick={addList}>チーム追加</button>
+                <button className="FormContent__button" type="submit" onClick={addList}>チーム登録</button>
               </div>
             </div>
             <div className="upButton"  onClick={returnTop}></div>
