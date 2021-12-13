@@ -250,6 +250,12 @@ button {
   margin: 4px;
   text-align: center;
 }
+.Head .gross:active {
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px);
+  box-shadow: none;
+  border-bottom: 2px solid #e2f1f1;
+}
 .Head .point {
   font-size: 1rem;
   font-weight: 600;
@@ -263,6 +269,12 @@ button {
   margin: 4px;
   text-align: center;
 }
+.Head .point:active {
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px);
+  box-shadow: none;
+  border-bottom: 2px solid #e2f1f1;
+}
 .Head .score {
   font-size: 1rem;
   font-weight: 600;
@@ -275,6 +287,12 @@ button {
   box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
   margin: 4px;
   text-align: center;
+}
+.Head .score:active {
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px);
+  box-shadow: none;
+  border-bottom: 2px solid #e2f1f1;
 }
 .Head .space {
   width: 47px;
