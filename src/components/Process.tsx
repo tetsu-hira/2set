@@ -36,6 +36,7 @@ const Process: React.FC = () => {
   const [ drawWin, setDrawWin ] = useState<number>(0);
   const [ drawDraw, setDrawDraw ] = useState<number>(0);
   const [ drawLose, setDrawLose ] = useState<number>(0);
+  const [ sort, setSort ] = useState<any>('');
 
 
 
@@ -67,6 +68,7 @@ const Process: React.FC = () => {
     setData('');
   }
 
+  // 対戦表に登録したチームの取り消し
   const handleRemoveTask = (index:number) => {
     const delTeam: any = plan.find((elem) => plan[index] === elem )
     const newPlan = [...plan]
@@ -80,6 +82,7 @@ const Process: React.FC = () => {
     result1.gross = result2
   }
 
+  // 対戦表にチームを登録
   const addPlan = (index: number) => {
     const addName: any = list.find((elem) => list[index] === elem )
     setPlan([...plan, {name: addName.name, time1: 0, time2: 0, count: 0, marks: 0}]);
@@ -89,6 +92,9 @@ const Process: React.FC = () => {
     const result1 = result.length + 1;
     list[index].gross = result1;
   }
+
+
+
 
 
   const addTime1 = (index:number, minute:number) => {
@@ -328,8 +334,74 @@ const Process: React.FC = () => {
     });
   }
 
+  // ソート機能を実装
+  const sortGross = () => {
+    let newList: any;
+    newList = list.sort((el1, el2) => {
+      if (el1['gross'] < el2['gross']) {
+        return 1;
+      }
+      if (el1['gross'] > el2['gross']) {
+        return -1;
+      }
+        return 0;
+    });
+    setSort('gross');
+    setList(newList);
+  };
+  const sortPoint = () => {
+    let newList: any;
+    newList = list.sort((el1, el2) => {
+      if (el1['point'] < el2['point']) {
+        return 1;
+      }
+      if (el1['point'] > el2['point']) {
+        return -1;
+      }
+        return 0;
+    });
+    setSort('point');
+    setList(newList);
+  };
+  const sortScore = () => {
+    let newList: any;
+    newList = list.sort((el1, el2) => {
+      if (el1['score'] < el2['score']) {
+        return 1;
+      }
+      if (el1['score'] > el2['score']) {
+        return -1;
+      }
+        return 0;
+    });
+    setSort('score');
+    setList(newList);
+  };
+
+
+  // let sortedLists = useMemo(() => {
+  //   let _sortedLists = list.name;
+  //   if (sort.key) {
+  //     _sortedLists = _sortedLists.sort((a, b) => {
+  //       a = a[sort.key];
+  //       b = b[sort.key];
+
+  //       if(a === b) {
+  //         return 0;
+  //       }
+  //       if(a > b) {
+  //         return 1 * sort.order;
+  //       }
+  //       if(a < b) {
+  //         return -1 * sort.order;
+  //       }
+  //     });
+  //   }
+  //   return _sortedLists;
+  // }, [sort]);
+
   // 確認のため設置
-  console.log(list);
+  // console.log(list);
 
 
   return (
@@ -342,9 +414,9 @@ const Process: React.FC = () => {
             <div className="ProcessList__Border">
               <div className="Head">
                 <div className="name">Team</div>
-                <div className="gross">Q</div>
-                <div className="point">P</div>
-                <div className="score">S</div>
+                <button className="gross" onClick={sortGross}>Q</button>
+                <button className="point" onClick={sortPoint}>P</button>
+                <button className="score" onClick={sortScore}>S</button>
                 <div className="space"></div>
               </div>
               <ul className="Item">
@@ -391,7 +463,7 @@ const Process: React.FC = () => {
             <div className="downButton"  onClick={goBottom}></div>
           </div>
           <div className="Result">
-            <h1 className="title">【試合内容】</h1>
+            <h1 className="title">【対戦表】</h1>
               <div className="Result__Border">
                 { plan.map((item, idx: number) => (
                   <>
