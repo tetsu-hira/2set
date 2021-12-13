@@ -98,7 +98,9 @@ button {
   border: none;
   background-color: #b7cadc;
   margin-left: 5em;
-  line-height: 1.4;
+  height: 48px;
+  line-height: 24px;
+  display: block;
   appearance: none;
   outline: none;
   color: #fff;
