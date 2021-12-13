@@ -240,6 +240,7 @@ button {
 .Head .gross {
   font-size: 1rem;
   font-weight: 600;
+  color: #6c7686;
   width: 40px;
   height: 36px;
   background-color: #e2f1f1;
@@ -252,6 +253,7 @@ button {
 .Head .point {
   font-size: 1rem;
   font-weight: 600;
+  color: #6c7686;
   width: 40px;
   height: 36px;
   line-height: 35px;
