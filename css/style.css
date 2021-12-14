@@ -691,9 +691,14 @@ button {
     margin: auto 3px;
     position: absolute;
     left: 5px;
-    top: 20px;
+    top: 22px;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
     line-height: 8px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .ProcessContainer .ProcessMain .Result__Border .FlexCount__Button .SubCount.bottom {
+    top: 26px;
   }
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexCount__Button .SubCount:hover {
@@ -732,6 +737,11 @@ button {
     left: 5px;
     top: 2px;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+@media screen and (max-width: 600px) {
+  .ProcessContainer .ProcessMain .Result__Border .FlexCount__Button .AddCount.bottom {
+    top: 6px;
   }
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexCount__Button .AddCount:hover {
@@ -874,6 +884,8 @@ button {
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexNumber {
   height: 88px;
+  width: 60px;
+  position: relative;
 }
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border .FlexNumber {
@@ -883,8 +895,13 @@ button {
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexNumber__item {
   width: 60px;
-  line-height: 88px;
+  line-height: 1.5;
   font-size: 0.8em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border .FlexNumber__item {
