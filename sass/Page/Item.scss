@@ -1,5 +1,9 @@
 .Item {
   background-color: $BackColor;
+  @include mq() {
+    width: 327px;
+    margin: 4px auto;
+  }
   &List {
     height: 40px;
     margin: 4px 0;
@@ -17,12 +21,13 @@
         text-align: center;
         // padding-left: 12px;
         font-weight: 600;
-        width: 160px;
+        width: 158px;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
         line-height: 1;
         padding: 0px 10px;
         @include mq() {
           font-size: 0.8em;
+          width: 136px;
         }
       }
       .gross {
@@ -74,7 +79,7 @@
       .AddPlan {
         background: $PrimaryColor;
         font-size: 12px;
-        width: 48px;
+        width: 36px;
         height: 26px;
         line-height: 24px;
         text-align: center;
@@ -86,7 +91,7 @@
         border-bottom: 2px solid #7694b180;
         border-right: 1px solid $PrimaryColor;
         border-radius: 4px;
-        margin: auto 4px auto 0;
+        margin: auto;
         box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 15%);
         -webkit-transform-style: preserve-3d;
         transform-style: preserve-3d;

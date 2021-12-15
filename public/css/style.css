@@ -224,6 +224,12 @@ button {
   width: 100%;
   background-color: #fff;
 }
+@media screen and (max-width: 600px) {
+  .Head {
+    width: 327px;
+    margin: 4px auto;
+  }
+}
 .Head .name {
   font-size: 1rem;
   font-weight: 600;
@@ -231,11 +237,16 @@ button {
   margin: auto 4px auto 0;
   text-align: center;
   height: 36px;
-  width: 153px;
+  width: 154px;
   background-color: #e2f1f1;
   line-height: 35px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 600px) {
+  .Head .name {
+    width: 131px;
+  }
 }
 .Head .gross {
   font-size: 1rem;
@@ -295,7 +306,7 @@ button {
   border-bottom: 2px solid #e2f1f1;
 }
 .Head .space {
-  width: 47px;
+  width: 44px;
   height: 36px;
   background-color: #e2f1f1;
   margin-left: 4px;
@@ -331,6 +342,12 @@ button {
 .Item {
   background-color: #fff;
 }
+@media screen and (max-width: 600px) {
+  .Item {
+    width: 327px;
+    margin: 4px auto;
+  }
+}
 .ItemList {
   height: 40px;
   margin: 4px 0;
@@ -349,7 +366,7 @@ button {
   margin: auto 0;
   text-align: center;
   font-weight: 600;
-  width: 160px;
+  width: 158px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   line-height: 1;
   padding: 0px 10px;
@@ -357,6 +374,7 @@ button {
 @media screen and (max-width: 600px) {
   .ItemList__data .name {
     font-size: 0.8em;
+    width: 136px;
   }
 }
 .ItemList__data .gross {
@@ -411,7 +429,7 @@ button {
 .ItemList__data .AddPlan {
   background: #b7cadc;
   font-size: 12px;
-  width: 48px;
+  width: 36px;
   height: 26px;
   line-height: 24px;
   text-align: center;
@@ -421,7 +439,7 @@ button {
   border-bottom: 2px solid #7694b180;
   border-right: 1px solid #b7cadc;
   border-radius: 4px;
-  margin: auto 4px auto 0;
+  margin: auto;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;

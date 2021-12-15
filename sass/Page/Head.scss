@@ -9,6 +9,10 @@
   background-color: $WhiteColor;
   // box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
   // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  @include mq() {
+    width: 327px;
+    margin: 4px auto;
+  }
   .name {
     font-size: 1rem;
     font-weight: 600;
@@ -16,11 +20,14 @@
     margin: auto 4px auto 0;
     text-align: center;
     height: 36px;
-    width: 153px;
+    width: 154px;
     background-color: $SubColor;
     line-height: 35px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
     box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
+    @include mq() {
+      width: 131px;
+    }
   }
   .gross {
     font-size: 1rem;
@@ -83,7 +90,7 @@
     }
   }
   .space {
-    width: 47px;
+    width: 44px;
     height: 36px;
     background-color: $SubColor;
     margin-left: 4px;

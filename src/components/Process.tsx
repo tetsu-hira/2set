@@ -428,7 +428,7 @@ const Process: React.FC = () => {
                       <div className="gross">{item.gross}</div>
                       <div className="point">{item.point}</div>
                       <div className="score">{item.score}</div>
-                      <button className="AddPlan" onClick={()=> addPlan(idx)}>登録</button>
+                      <button className="AddPlan" onClick={()=> addPlan(idx)}>試合</button>
                     </div>
                 </li>
                 ))}
