@@ -468,7 +468,7 @@ const Process: React.FC = () => {
               <div className="Result__Border">
                 { plan.map((item, idx: number) => (
                   <>
-                    <div className="Flex" key={idx}>
+                    <div className={idx % 2 === 0 ? 'Flex left' : 'Flex right'} key={idx}>
                       <div className="FlexNumber">
                         { idx % 2 === 0 && <div className="FlexNumber__item">第{idx/2+1}試合</div> }
                       </div>
