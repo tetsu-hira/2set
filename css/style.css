@@ -668,6 +668,16 @@ button {
     width: 48%;
   }
 }
+@media screen and (max-width: 600px) {
+  .ProcessContainer .ProcessMain .Result__Border .Flex.left {
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 600px) {
+  .ProcessContainer .ProcessMain .Result__Border .Flex.right {
+    justify-content: flex-start;
+  }
+}
 .ProcessContainer .ProcessMain .Result__Border .FlexCount {
   height: 88px;
   width: auto;
@@ -779,7 +789,7 @@ button {
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border .FlexCount__Point {
     display: block;
-    width: 48px;
+    width: 32px;
     position: relative;
   }
 }
@@ -805,7 +815,10 @@ button {
 }
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border .FlexName {
-    width: 96px;
+    width: 88px;
+    font-weight: 600;
+    font-size: 1em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   }
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexName .ResultIndex {
