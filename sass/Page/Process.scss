@@ -410,8 +410,10 @@
               &__item {
                 width: 60px;
                 height: 44px;
-                line-height: 44px;
+                line-height: 38px;
+                font-size: 2em;
                 position: relative;
+                color: $FontColor;
                 @include mq() {
                   width: auto;
                   position: relative;

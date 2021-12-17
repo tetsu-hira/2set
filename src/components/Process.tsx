@@ -473,8 +473,8 @@ const Process: React.FC = () => {
                         { idx % 2 === 0 && <div className="FlexNumber__item">第{idx/2+1}試合</div> }
                       </div>
                       <div className="FlexCross">
-                        { idx % 2 !== 0 && <div className="FlexCross__item">✖</div> }
-                        { idx % 2 !== 0 && <div className="FlexCross__item">✖</div> }
+                        { idx % 2 !== 0 && <div className="FlexCross__item">-</div> }
+                        { idx % 2 !== 0 && <div className="FlexCross__item">-</div> }
                       </div>
                       <div className="FlexCount">
                         { idx % 2 === 0 &&
@@ -533,10 +533,10 @@ const Process: React.FC = () => {
                     </div>
                     { idx % 2 === 0 && <div className="Cross">
                       <div className="Cross__item">
-                        <div className="Cross__text">✖</div>
+                        <div className="Cross__text">-</div>
                       </div>
                       <div className="Cross__item">
-                        <div className="Cross__text">✖</div>
+                        <div className="Cross__text">-</div>
                       </div>
                     </div> }
                   </>
