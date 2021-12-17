@@ -163,11 +163,12 @@ button {
 }
 .Cross__item .Cross__text {
   position: absolute;
-  top: 51%;
+  top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  font-size: 0.7em;
+  font-size: 1em;
+  color: #6c7686;
 }
 
 .Form {
@@ -306,7 +307,7 @@ button {
   border-bottom: 2px solid #e2f1f1;
 }
 .Head .space {
-  width: 44px;
+  width: 46px;
   height: 36px;
   background-color: #e2f1f1;
   margin-left: 4px;
@@ -897,8 +898,10 @@ button {
 .ProcessContainer .ProcessMain .Result__Border .FlexCross__item {
   width: 60px;
   height: 44px;
-  line-height: 44px;
+  line-height: 38px;
+  font-size: 2em;
   position: relative;
+  color: #6c7686;
 }
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border .FlexCross__item {
