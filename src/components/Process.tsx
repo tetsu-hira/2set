@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import * as React from 'react';
 // import ExcelJS from "exceljs";
 // import File from "./File";
@@ -37,6 +37,26 @@ const Process: React.FC = () => {
   const [ drawDraw, setDrawDraw ] = useState<number>(0);
   const [ drawLose, setDrawLose ] = useState<number>(0);
   const [ sort, setSort ] = useState<any>('');
+
+  const [ title, setTitle ] = useState<string>('');
+  const [ name, setName ] = useState<string>('');
+
+  const changeTitle = (e:any) => {
+    setName(e.target.value);
+    console.log(name);
+  }
+  const onTitle = () => {
+    setTitle(name);
+  }
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    if (title === "") {
+      document.title = "にせっとまっち";
+    } else {
+      document.title = title;
+    }
+  });
 
 
 
@@ -411,7 +431,7 @@ const Process: React.FC = () => {
         <div className="ProcessMain">
           <div className="ProcessList">
             { list.length > 0 && <div>
-              <h1>【チーム一覧】</h1>
+              <h1 className="teamList">【チーム一覧】</h1>
               <p>Q：試合数　P：勝ち点　S：得失点差</p>
               <div className="ProcessList__Border">
                 <div className="Head">
@@ -434,10 +454,18 @@ const Process: React.FC = () => {
                   </li>
                   ))}
                 </ul>
-              </div> 
-
+              </div>
             </div>}
-            <h1>①勝ち点を入力</h1>
+            { (!title) && <div>
+            <h1>１．大会名を登録</h1>
+            <div className="Form">
+              <div className="FormContent">
+                <input className="FormContent__name" type="text" id="name" onChange={changeTitle}></input>
+                <button className="FormContent__button" type="submit" onClick={onTitle}>登　録</button>
+              </div>
+            </div>
+            </div>}
+            <h1>２．勝ち点を入力</h1>
             <div className="Insert">
               <div className="InsertContent">
                 <div className="InsertContent__text">勝ち</div>
@@ -456,11 +484,11 @@ const Process: React.FC = () => {
                 <input className="InsertContent__entry" type="number" id="draw_lose" onChange={changeDrawLose}></input>
               </div>
             </div>
-            <h1>②チームを登録</h1>
+            <h1>３．チームを登録</h1>
             <div className="Form">
               <div className="FormContent">
                 <input className="FormContent__name" type="text" id="name" value={data} onChange={changeData}></input>
-                <button className="FormContent__button" type="submit" onClick={addList}>チーム登録</button>
+                <button className="FormContent__button" type="submit" onClick={addList}>登　録</button>
               </div>
             </div>
             <div className="upButton"  onClick={returnTop}></div>

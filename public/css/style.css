@@ -173,6 +173,7 @@ button {
 
 .Form {
   display: flex;
+  margin-bottom: 1.5em;
 }
 .FormContent {
   display: flex;
@@ -496,10 +497,17 @@ button {
 .ProcessContainer .ProcessMain .ProcessList p {
   font-size: 0.8rem;
 }
+.ProcessContainer .ProcessMain .ProcessList h1 {
+  text-align: left;
+  padding-left: 1.2em;
+}
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .ProcessList h1 {
     font-size: 1.2em;
   }
+}
+.ProcessContainer .ProcessMain .ProcessList h1.teamList {
+  text-align: center;
 }
 .ProcessContainer .ProcessMain .ProcessList__Border {
   margin-bottom: 1em;

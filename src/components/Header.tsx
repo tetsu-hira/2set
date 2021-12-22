@@ -32,7 +32,6 @@ const Header: React.FC = () => {
   return (
     <div className="Header">
       <div className="WebTitle">「にせっとまっち」</div>
-      <input className="HeaderTitle" type="text" onChange={changeTitle} onClick={titleClear} onBlur={returnTitle} value={title} />
     </div>
   )
 }
