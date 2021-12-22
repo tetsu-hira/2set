@@ -410,31 +410,34 @@ const Process: React.FC = () => {
       <div className="ProcessContainer">
         <div className="ProcessMain">
           <div className="ProcessList">
-            <h1>【チーム一覧】</h1>
-            <p>Q：試合数　P：勝ち点　S：得失点差</p>
-            <div className="ProcessList__Border">
-              <div className="Head">
-                <div className="name">Team</div>
-                <button className="gross" onClick={sortGross}>Q</button>
-                <button className="point" onClick={sortPoint}>P</button>
-                <button className="score" onClick={sortScore}>S</button>
-                <div className="space"></div>
-              </div>
-              <ul className="Item">
-                { list.map((item:Pro, idx: number) => (
-                  <li className="ItemList" key={item.name}>
-                    <div className="ItemList__data">
-                      <div className="name">{item.name}</div>
-                      <div className="gross">{item.gross}</div>
-                      <div className="point">{item.point}</div>
-                      <div className="score">{item.score}</div>
-                      <button className="AddPlan" onClick={()=> addPlan(idx)}>試合</button>
-                    </div>
-                </li>
-                ))}
-              </ul>
-            </div>
-            <h1>【勝ち点を入力】</h1>
+            { list.length > 0 && <div>
+              <h1>【チーム一覧】</h1>
+              <p>Q：試合数　P：勝ち点　S：得失点差</p>
+              <div className="ProcessList__Border">
+                <div className="Head">
+                  <div className="name">Team</div>
+                  <button className="gross" onClick={sortGross}>Q</button>
+                  <button className="point" onClick={sortPoint}>P</button>
+                  <button className="score" onClick={sortScore}>S</button>
+                  <div className="space"></div>
+                </div>
+                <ul className="Item">
+                  { list.map((item:Pro, idx: number) => (
+                    <li className="ItemList" key={item.name}>
+                      <div className="ItemList__data">
+                        <div className="name">{item.name}</div>
+                        <div className="gross">{item.gross}</div>
+                        <div className="point">{item.point}</div>
+                        <div className="score">{item.score}</div>
+                        <button className="AddPlan" onClick={()=> addPlan(idx)}>試合</button>
+                      </div>
+                  </li>
+                  ))}
+                </ul>
+              </div> 
+
+            </div>}
+            <h1>①勝ち点を入力</h1>
             <div className="Insert">
               <div className="InsertContent">
                 <div className="InsertContent__text">勝ち</div>
@@ -453,7 +456,7 @@ const Process: React.FC = () => {
                 <input className="InsertContent__entry" type="number" id="draw_lose" onChange={changeDrawLose}></input>
               </div>
             </div>
-            <h1>【チームを登録】</h1>
+            <h1>②チームを登録</h1>
             <div className="Form">
               <div className="FormContent">
                 <input className="FormContent__name" type="text" id="name" value={data} onChange={changeData}></input>
