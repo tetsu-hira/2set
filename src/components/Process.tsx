@@ -505,6 +505,7 @@ const Process: React.FC = () => {
               <div className="downButton"  onClick={goBottom}></div>
               }
             </div>
+            { plan.length > 0 &&
             <div className="Result">
               <h1 className="title">【対戦表】</h1>
                 <div className="Result__Border">
@@ -592,7 +593,7 @@ const Process: React.FC = () => {
                   CSV形式
                 </button> */}
               </div>
-            </div>
+            </div>}
           </div>
         </div>
       </div>
