@@ -131,7 +131,14 @@ button {
 }
 @media screen and (max-width: 600px) {
   .Header .WebTitle {
-    display: none;
+    margin: auto;
+    font-size: 1em;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    left: 0;
+    width: 100%;
+    position: initial;
   }
 }
 
