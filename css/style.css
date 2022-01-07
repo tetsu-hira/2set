@@ -219,6 +219,7 @@ button {
     width: 67px;
     font-size: 16px;
     padding-left: 2px;
+    line-height: 17px;
   }
 }
 .FormContent__button:hover {
