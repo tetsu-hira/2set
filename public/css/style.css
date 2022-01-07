@@ -132,7 +132,7 @@ button {
 @media screen and (max-width: 600px) {
   .Header .WebTitle {
     margin: auto;
-    font-size: 1em;
+    font-size: 1.2em;
     text-align: center;
     height: 40px;
     line-height: 40px;
@@ -212,10 +212,13 @@ button {
   border: 1px solid #dcc9b7;
   margin: 8px 0;
   box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
 }
 @media screen and (max-width: 600px) {
   .FormContent__button {
-    width: 80px;
+    width: 67px;
+    font-size: 16px;
+    line-height: 40px;
   }
 }
 .FormContent__button:hover {
@@ -351,7 +354,7 @@ button {
 }
 @media screen and (max-width: 600px) {
   .InsertContent__text {
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight: 400;
   }
 }

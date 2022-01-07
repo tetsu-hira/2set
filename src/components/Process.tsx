@@ -468,7 +468,7 @@ const Process: React.FC = () => {
               <div className="Form">
                 <div className="FormContent">
                   <input className="FormContent__name" type="text" id="name" onChange={changeTitle}></input>
-                  <button className="FormContent__button" type="submit" onClick={onTitle}>登　録</button>
+                  <button className="FormContent__button" type="submit" onClick={onTitle}>登 録</button>
                 </div>
               </div>
               </div>}
@@ -495,7 +495,7 @@ const Process: React.FC = () => {
               <div className="Form">
                 <div className="FormContent">
                   <input className="FormContent__name" type="text" id="name" value={data} onChange={changeData}></input>
-                  <button className="FormContent__button" type="submit" onClick={addList}>登　録</button>
+                  <button className="FormContent__button" type="submit" onClick={addList}>登 録</button>
                 </div>
               </div>
               { list.length > 0 &&

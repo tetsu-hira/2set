@@ -6,7 +6,7 @@
     &__text {
       font-weight: 600;
       @include mq() {
-        font-size: 0.8em;
+        font-size: 1em;
         font-weight: 400;
       }
     }
