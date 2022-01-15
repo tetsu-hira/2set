@@ -52,7 +52,7 @@ const Process: React.FC = () => {
   useEffect(() => {
     // Update the document title using the browser API
     if (title === "") {
-      document.title = "にせっとまっち";
+      document.title = "2setMatch";
     } else {
       document.title = title;
     }
@@ -429,7 +429,7 @@ const Process: React.FC = () => {
     <>
       <div className="Header">
       { (!title) ?
-        <div className="WebTitle">にせっとまっち</div> :
+        <div className="WebTitle">2setMatch</div> :
         <div className="WebTitle">{title}</div>
       }
       </div>

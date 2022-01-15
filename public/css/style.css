@@ -5,7 +5,7 @@
 
 html {
   font-size: 100%;
-  font-family: "Hiragino Sans", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
   line-height: 1.7;
   letter-spacing: 1px;
 }
@@ -124,7 +124,7 @@ button {
 .Header .WebTitle {
   color: #fff;
   font-size: 2em;
-  font-family: "Yomogi", cursive;
+  font-family: "Mochiy Pop P One", sans-serif;
   text-shadow: 1px 1px 0px rgba(86, 89, 108, 0.94);
   margin-left: 1.5em;
   line-height: 1.4;
@@ -203,7 +203,7 @@ button {
 }
 .FormContent__button {
   background: #dcc9b7;
-  font-size: 12px;
+  font-size: 16px;
   width: 100px;
   height: 40px;
   line-height: 20px;
