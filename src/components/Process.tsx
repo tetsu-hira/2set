@@ -522,8 +522,8 @@ const Process: React.FC = () => {
                         <div className="FlexCount">
                           { idx % 2 === 0 &&
                             <div className="FlexCount__Button">
-                              <button className="SubCount top" onClick={()=> addTime1(idx, -1)}>-</button>
-                              <button className="AddCount top" onClick={()=> addTime1(idx, 5)}>+</button>
+                              <button className="SubCount top" onClick={()=> addTime1(idx, -1)}><div className="CountText">-</div></button>
+                              <button className="AddCount top" onClick={()=> addTime1(idx, 5)}><div className="CountText">+</div></button>
                             </div>
                           }
                           { idx % 2 !== 0 &&
@@ -533,8 +533,8 @@ const Process: React.FC = () => {
                           }
                           { idx % 2 === 0 &&
                             <div className="FlexCount__Button">
-                              <button className="SubCount bottom" onClick={()=> addTime2(idx, -1)}>-</button>
-                              <button className="AddCount bottom" onClick={()=> addTime2(idx, 5)}>+</button>
+                              <button className="SubCount bottom" onClick={()=> addTime2(idx, -1)}><div className="CountText">-</div></button>
+                              <button className="AddCount bottom" onClick={()=> addTime2(idx, 5)}><div className="CountText">+</div></button>
                             </div>
                           }
                           { idx % 2 !== 0 &&
@@ -552,8 +552,8 @@ const Process: React.FC = () => {
                         <div className="FlexCount">
                         { idx % 2 !== 0 &&
                           <div className="FlexCount__Button">
-                            <button className="SubCount top" onClick={()=> addTime1(idx, -1)}>-</button>
-                            <button className="AddCount top" onClick={()=> addTime1(idx, 5)}>+</button>
+                            <button className="SubCount top" onClick={()=> addTime1(idx, -1)}><div className="CountText">-</div></button>
+                            <button className="AddCount top" onClick={()=> addTime1(idx, 5)}><div className="CountText">+</div></button>
                           </div>
                         }
                         { idx % 2 === 0 &&
@@ -563,8 +563,8 @@ const Process: React.FC = () => {
                         }
                         { idx % 2 !== 0 &&
                           <div className="FlexCount__Button">
-                            <button className="SubCount bottom" onClick={()=> addTime2(idx, -1)}>-</button>
-                            <button className="AddCount bottom" onClick={()=> addTime2(idx, 5)}>+</button>
+                            <button className="SubCount bottom" onClick={()=> addTime2(idx, -1)}><div className="CountText">-</div></button>
+                            <button className="AddCount bottom" onClick={()=> addTime2(idx, 5)}><div className="CountText">+</div></button>
                           </div>
                         }
                         { idx % 2 === 0 &&

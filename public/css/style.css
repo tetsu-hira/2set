@@ -751,21 +751,23 @@ button {
 }
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border .FlexCount__Button .SubCount {
-    display: inline-block;
-    width: 32px;
-    height: 16px;
+    display: flex;
+    width: 36px;
+    height: 18px;
+    border-bottom: 1px solid #5a687480;
     border-radius: 50%/0 0 100% 100%;
     margin: auto 3px;
     position: absolute;
-    left: 5px;
-    top: 22px;
+    left: 3px;
+    top: 24px;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-    line-height: 8px;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border .FlexCount__Button .SubCount.bottom {
-    top: 26px;
+    top: 28px;
   }
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexCount__Button .SubCount:hover {
@@ -776,6 +778,9 @@ button {
   transform: translateY(1px);
   box-shadow: none;
   border-bottom: 2px solid #e2f1f1;
+}
+.ProcessContainer .ProcessMain .Result__Border .FlexCount__Button .SubCount .CountText {
+  color: #6c7686;
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexCount__Button .AddCount {
   background: #e2f1f1;
@@ -795,20 +800,23 @@ button {
 }
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border .FlexCount__Button .AddCount {
-    display: inline-block;
-    width: 32px;
-    height: 16px;
+    display: flex;
+    width: 36px;
+    height: 18px;
+    border-bottom: 1px solid #5a687480;
     border-radius: 50%/100% 100% 0 0;
     margin: auto 3px;
     position: absolute;
-    left: 5px;
-    top: 2px;
+    left: 3px;
+    top: 3px;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
   }
 }
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border .FlexCount__Button .AddCount.bottom {
-    top: 6px;
+    top: 7px;
   }
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexCount__Button .AddCount:hover {

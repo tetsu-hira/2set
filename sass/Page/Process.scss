@@ -236,20 +236,22 @@
                   box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 13%);
                   font-family: "游ゴシック", YuGothic, "游ゴシック体";
                   @include mq() {
-                    display: inline-block;
-                    width: 32px;
-                    height: 16px;
+                    display: flex;
+                    width: 36px;
+                    height: 18px;
+                    border-bottom: 1px solid #5a687480;
                     border-radius: 50% / 0 0 100% 100%;
                     margin: auto 3px;
                     position: absolute;
-                    left: 5px;
-                    top: 22px;
+                    left: 3px;
+                    top: 24px;
                     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 10%);
-                    line-height: 8px;
+                    justify-content: center;
+                    align-items: center;
                   }
                   &.bottom {
                     @include mq() {
-                      top: 26px;
+                      top: 28px;
                     }
                   }
                   &:hover {
@@ -261,6 +263,9 @@
                     box-shadow: none;
                     // border: 1px solid $SubColor;
                     border-bottom: 2px solid $SubColor;
+                  }
+                  .CountText {
+                    color: $FontColor;
                   }
                 }
                 .AddCount {
@@ -279,19 +284,22 @@
                   box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 13%);
                   font-family: "游ゴシック", YuGothic, "游ゴシック体";
                   @include mq() {
-                    display: inline-block;
-                    width: 32px;
-                    height: 16px;
+                    display: flex;
+                    width: 36px;
+                    height: 18px;
+                    border-bottom: 1px solid #5a687480;
                     border-radius: 50% / 100% 100% 0 0;
                     margin: auto 3px;
                     position: absolute;
-                    left: 5px;
-                    top: 2px;
+                    left: 3px;
+                    top: 3px;
                     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 10%);
+                    justify-content: center;
+                    align-items: center;
                   }
                   &.bottom {
                     @include mq() {
-                      top: 6px;
+                      top: 7px;
                     }
                   }
                   &:hover {
