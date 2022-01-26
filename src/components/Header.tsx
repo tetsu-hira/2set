@@ -12,7 +12,7 @@ const Header: React.FC = () => {
   useEffect(() => {
     // Update the document title using the browser API
     if (title === "→この文章を消して大会名や部門名を入力←") {
-      document.title = "にせっとまっち";
+      document.title = "2setMatch";
     } else {
       document.title = title;
     }
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
 
   return (
     <div className="Header">
-      <div className="WebTitle">「にせっとまっち」</div>
+      <div className="WebTitle">2setMatch</div>
     </div>
   )
 }
