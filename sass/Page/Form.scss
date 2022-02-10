@@ -19,7 +19,7 @@
       }
     }
     &__button {
-      background: $SecondaryColor;
+      background: $PrimaryColor;
       // border-radius: 30px;
       font-size: 16px;
       width: 100px;
@@ -27,7 +27,7 @@
       line-height: 20px;
       text-align: center;
       color: #fff;
-      border: 1px solid $SecondaryColor;
+      border: 1px solid $PrimaryColor;
       margin: 8px 0;
       box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 20%);
       border-radius: 3px;
@@ -39,7 +39,7 @@
       }
       &:hover {
         background-color: #ffffff;
-        color: $SecondaryColor;
+        color: $PrimaryColor;
         transition: all 0.3s ease;
       }
     }

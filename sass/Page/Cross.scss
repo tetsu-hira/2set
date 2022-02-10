@@ -1,13 +1,19 @@
 .Cross {
   height: 88px;
   width: 2%;
-  border-bottom: 1px solid $FontColor;
+  // border-bottom: 1px solid $FontColor;
   display: none;
+  background-color: $WhiteColor;
+  box-shadow: 2px 2px 2px rgb(185, 184, 184);
   @include mq() {
     display: block;
     width: 4%;
-    border-bottom: 1px solid $FontColor;
-    height: 105px;
+    // border-bottom: 1px solid $FontColor;
+    background-color: $WhiteColor;
+    box-shadow: 2px 2px 2px rgb(185, 184, 184);
+    height: 106px;
+    padding-bottom: 10px;
+    padding-top: 8px;
   }
   &__item {
     width: auto;

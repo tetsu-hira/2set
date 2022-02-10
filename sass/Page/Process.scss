@@ -54,7 +54,7 @@
             padding: 0 9px;
             margin: 4px;
             border: 1px solid $PrimaryColor;
-            text-align-last:right;
+            text-align-last: right;
             outline: none;
             // appearance: none;
             color: $FontColor;
@@ -106,7 +106,8 @@
           }
           &:hover::after {
             // background-color: $SecondaryColor;
-            border-color: $SecondaryColor $SecondaryColor transparent transparent;
+            border-color: $SecondaryColor $SecondaryColor transparent
+              transparent;
             color: $SecondaryColor;
             transition: all 0.3s ease;
           }
@@ -148,14 +149,15 @@
           }
           &:hover::after {
             // background-color: $SecondaryColor;
-            border-color: $SecondaryColor $SecondaryColor transparent transparent;
+            border-color: $SecondaryColor $SecondaryColor transparent
+              transparent;
             color: $SecondaryColor;
             transition: all 0.3s ease;
           }
         }
       }
       .Result {
-        width: 800px;
+        width: 816px;
         max-height: 100vh;
         overflow: auto;
         flex: 2;
@@ -185,15 +187,19 @@
           flex-wrap: wrap;
           width: 800px;
           @include mq() {
-            width: 100%;
-            justify-content: space-around;
+            width: 90%;
+            // justify-content: space-around;
+            margin: auto;
           }
           .Flex {
             display: flex;
             width: 50%;
             margin-bottom: 1em;
-            padding-bottom: 1em;
-            border-bottom: 1px solid $FontColor;
+            padding-bottom: 10px;
+            padding-top: 8px;
+            // border-bottom: 1px solid $FontColor;
+            background-color: $WhiteColor;
+            box-shadow: 2px 2px 2px rgb(185, 184, 184);
             @include mq() {
               justify-content: space-around;
               width: 48%;
@@ -204,8 +210,10 @@
               }
             }
             &.right {
+              padding-right: 16px;
               @include mq() {
                 justify-content: flex-start;
+                padding-right: 0;
               }
             }
             &Count {
@@ -233,7 +241,7 @@
                   margin: auto;
                   padding: 0;
                   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
-                  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 13%);
+                  box-shadow: 0px 2px 3px rgba(0, 0, 0, 13%);
                   font-family: "游ゴシック", YuGothic, "游ゴシック体";
                   @include mq() {
                     display: flex;
