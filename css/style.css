@@ -12,7 +12,7 @@ html {
 
 body {
   margin: 0;
-  background-color: #fff;
+  background-color: #ededed;
   color: #6c7686;
   height: 100vh;
 }
@@ -77,7 +77,7 @@ button {
 
 .Header {
   height: 48px;
-  background-color: #b7cadc;
+  background-color: #73a1cd;
   width: 100%;
   display: flex;
   box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -96,7 +96,7 @@ button {
   width: 21em;
   cursor: pointer;
   border: none;
-  background-color: #b7cadc;
+  background-color: #73a1cd;
   margin-left: 5em;
   height: 48px;
   line-height: 24px;
@@ -145,15 +145,19 @@ button {
 .Cross {
   height: 88px;
   width: 2%;
-  border-bottom: 1px solid #6c7686;
   display: none;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px #b9b8b8;
 }
 @media screen and (max-width: 600px) {
   .Cross {
     display: block;
     width: 4%;
-    border-bottom: 1px solid #6c7686;
-    height: 105px;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px #b9b8b8;
+    height: 106px;
+    padding-bottom: 10px;
+    padding-top: 8px;
   }
 }
 .Cross__item {
@@ -188,7 +192,7 @@ button {
 }
 .FormContent__name {
   height: 40px;
-  border: 1px solid #b7cadc;
+  border: 1px solid #73a1cd;
   display: flex;
   align-items: center;
   margin: auto 16px;
@@ -202,14 +206,14 @@ button {
   }
 }
 .FormContent__button {
-  background: #dcc9b7;
+  background: #73a1cd;
   font-size: 16px;
   width: 100px;
   height: 40px;
   line-height: 20px;
   text-align: center;
   color: #fff;
-  border: 1px solid #dcc9b7;
+  border: 1px solid #73a1cd;
   margin: 8px 0;
   box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 0.2);
   border-radius: 3px;
@@ -224,7 +228,7 @@ button {
 }
 .FormContent__button:hover {
   background-color: #ffffff;
-  color: #dcc9b7;
+  color: #73a1cd;
   transition: all 0.3s ease;
 }
 
@@ -236,6 +240,7 @@ button {
   align-items: center;
   width: 100%;
   background-color: #fff;
+  box-shadow: 0 1px 3px gray;
 }
 @media screen and (max-width: 600px) {
   .Head {
@@ -251,10 +256,9 @@ button {
   text-align: center;
   height: 36px;
   width: 154px;
-  background-color: #e2f1f1;
+  background-color: #fff;
   line-height: 35px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
 }
 @media screen and (max-width: 600px) {
   .Head .name {
@@ -265,18 +269,18 @@ button {
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  width: 40px;
-  height: 38px;
-  line-height: 36px;
-  background-color: #b7cadc;
-  border-top: 1px solid #b7cadc;
-  border-left: 1px solid #b7cadc;
-  border-bottom: 2px solid #7694b180;
-  border-right: 1px solid #b7cadc;
+  width: 36px;
+  height: 32px;
+  line-height: 30px;
+  background-color: #73a1cd;
+  border-top: 1px solid #73a1cd;
+  border-left: 1px solid #73a1cd;
+  border-bottom: 2px solid #4e709180;
+  border-right: 1px solid #73a1cd;
   border-radius: 4px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-  margin: 4px;
+  margin: 6px;
   text-align: center;
 }
 .Head .gross:active {
@@ -290,18 +294,18 @@ button {
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  width: 40px;
-  height: 38px;
-  line-height: 36px;
-  background-color: #b7cadc;
-  border-top: 1px solid #b7cadc;
-  border-left: 1px solid #b7cadc;
-  border-bottom: 2px solid #7694b180;
-  border-right: 1px solid #b7cadc;
+  width: 36px;
+  height: 32px;
+  line-height: 30px;
+  background-color: #73a1cd;
+  border-top: 1px solid #73a1cd;
+  border-left: 1px solid #73a1cd;
+  border-bottom: 2px solid #4e709180;
+  border-right: 1px solid #73a1cd;
   border-radius: 4px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-  margin: 4px;
+  margin: 6px;
   text-align: center;
 }
 .Head .point:active {
@@ -315,18 +319,18 @@ button {
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  width: 40px;
-  height: 38px;
-  line-height: 36px;
-  background-color: #b7cadc;
-  border-top: 1px solid #b7cadc;
-  border-left: 1px solid #b7cadc;
-  border-bottom: 2px solid #7694b180;
-  border-right: 1px solid #b7cadc;
+  width: 36px;
+  height: 32px;
+  line-height: 30px;
+  background-color: #73a1cd;
+  border-top: 1px solid #73a1cd;
+  border-left: 1px solid #73a1cd;
+  border-bottom: 2px solid #4e709180;
+  border-right: 1px solid #73a1cd;
   border-radius: 4px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-  margin: 4px;
+  margin: 6px;
   text-align: center;
 }
 .Head .score:active {
@@ -339,9 +343,8 @@ button {
 .Head .space {
   width: 46px;
   height: 36px;
-  background-color: #e2f1f1;
+  background-color: #fff;
   margin-left: 4px;
-  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
   content: "";
 }
 
@@ -363,7 +366,7 @@ button {
   color: #6c7686;
   width: 48px;
   height: 40px;
-  border: 1px solid #b7cadc;
+  border: 1px solid #73a1cd;
   align-items: center;
   text-align: center;
   margin: auto 7px;
@@ -371,7 +374,7 @@ button {
 }
 
 .Item {
-  background-color: #fff;
+  background-color: #ededed;
 }
 @media screen and (max-width: 600px) {
   .Item {
@@ -388,8 +391,8 @@ button {
 .ItemList__data {
   display: flex;
   width: 100%;
-  background-color: #e2f1f1;
-  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  box-shadow: 0 1px 3px gray;
 }
 .ItemList__data .name {
   font-size: 1rem;
@@ -458,17 +461,17 @@ button {
   }
 }
 .ItemList__data .AddPlan {
-  background: #b7cadc;
+  background: #73a1cd;
   font-size: 12px;
   width: 36px;
-  height: 26px;
-  line-height: 24px;
+  height: 32px;
+  line-height: 30px;
   text-align: center;
   color: #fff;
-  border-top: 1px solid #b7cadc;
-  border-left: 1px solid #b7cadc;
-  border-bottom: 2px solid #7694b180;
-  border-right: 1px solid #b7cadc;
+  border-top: 1px solid #73a1cd;
+  border-left: 1px solid #73a1cd;
+  border-bottom: 2px solid #4e709180;
+  border-right: 1px solid #73a1cd;
   border-radius: 4px;
   margin: auto;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
@@ -552,7 +555,7 @@ button {
   appearance: none;
   padding: 0 9px;
   margin: 4px;
-  border: 1px solid #b7cadc;
+  border: 1px solid #73a1cd;
   text-align-last: right;
   outline: none;
   color: #6c7686;
@@ -653,7 +656,7 @@ button {
   transition: all 0.3s ease;
 }
 .ProcessContainer .ProcessMain .Result {
-  width: 800px;
+  width: 816px;
   max-height: 100vh;
   overflow: auto;
   flex: 2;
@@ -690,16 +693,18 @@ button {
 }
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border {
-    width: 100%;
-    justify-content: space-around;
+    width: 90%;
+    margin: auto;
   }
 }
 .ProcessContainer .ProcessMain .Result__Border .Flex {
   display: flex;
   width: 50%;
   margin-bottom: 1em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid #6c7686;
+  padding-bottom: 10px;
+  padding-top: 8px;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px #b9b8b8;
 }
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border .Flex {
@@ -712,9 +717,13 @@ button {
     justify-content: flex-end;
   }
 }
+.ProcessContainer .ProcessMain .Result__Border .Flex.right {
+  padding-right: 16px;
+}
 @media screen and (max-width: 600px) {
   .ProcessContainer .ProcessMain .Result__Border .Flex.right {
     justify-content: flex-start;
+    padding-right: 0;
   }
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexCount {
@@ -746,7 +755,7 @@ button {
   margin: auto;
   padding: 0;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
-  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.13);
   font-family: "游ゴシック", YuGothic, "游ゴシック体";
 }
 @media screen and (max-width: 600px) {
@@ -869,7 +878,7 @@ button {
   }
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexName .ResultIndex {
-  border: 1px solid #b7cadc;
+  border: 1px solid #73a1cd;
   width: 60px;
   margin: 5px auto;
   height: 30px;
@@ -877,7 +886,7 @@ button {
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexName .ResultName {
   font-size: 1rem;
-  border: 1px solid #b7cadc;
+  border: 1px solid #73a1cd;
   width: 178px;
   height: 50px;
   line-height: 1;
@@ -903,7 +912,7 @@ button {
   transform: translate(-50%, -50%);
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexName .DeleteButton {
-  background: #b7cadc;
+  background: #73a1cd;
   font-size: 0.8rem;
   min-width: 64px;
   height: 22px;
@@ -914,10 +923,10 @@ button {
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  border-top: 1px solid #b7cadc;
-  border-left: 1px solid #b7cadc;
+  border-top: 1px solid #73a1cd;
+  border-left: 1px solid #73a1cd;
   border-bottom: 2px solid #7694b180;
-  border-right: 1px solid #b7cadc;
+  border-right: 1px solid #73a1cd;
 }
 .ProcessContainer .ProcessMain .Result__Border .FlexName .DeleteButton:hover {
   cursor: pointer;
