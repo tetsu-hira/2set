@@ -240,7 +240,7 @@ button {
   align-items: center;
   width: 100%;
   background-color: #fff;
-  box-shadow: 0 1px 3px gray;
+  box-shadow: 2px 2px 2px #b9b8b8;
 }
 @media screen and (max-width: 600px) {
   .Head {
@@ -392,7 +392,7 @@ button {
   display: flex;
   width: 100%;
   background-color: #fff;
-  box-shadow: 0 1px 3px gray;
+  box-shadow: 2px 2px 2px #b9b8b8;
 }
 .ItemList__data .name {
   font-size: 1rem;
@@ -755,7 +755,7 @@ button {
   margin: auto;
   padding: 0;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.13);
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.1));
   font-family: "游ゴシック", YuGothic, "游ゴシック体";
 }
 @media screen and (max-width: 600px) {
@@ -804,7 +804,7 @@ button {
   margin: auto;
   padding: 0;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
-  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.13);
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.1));
   font-family: "游ゴシック", YuGothic, "游ゴシック体";
 }
 @media screen and (max-width: 600px) {
